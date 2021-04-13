@@ -1,0 +1,25 @@
+{
+  "name": "projeto_rh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_mudules ./src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p4lhano/nossa_equipe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/p4lhano/nossa_equipe/issues"
+  },
+  "homepage": "https://github.com/p4lhano/nossa_equipe#readme"
+}
