@@ -1,9 +1,14 @@
 import express from "express";
 import {mongoose} from "../config/database";
+import {router} from "../config/routes";
+
+console.clear();
 
 const app = express();
 const database = mongoose;
-console.clear();
+
+app.use(router);
+
 app.listen(3000, () => {
     console.log("O servidor está rodando...") ;
  });
