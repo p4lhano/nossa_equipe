@@ -2,16 +2,17 @@ import {Request, Response} from "express";
 import funcSchema from "../models/funcSchema";
 
 class funcController{
-
-    async cadastrarFuncionario(request: Request, response: Response) {
+    async cadastrar(request: Request, response: Response) {
         try {
+            //console.log(request.body);
             const novoFuncionario = await funcSchema.create(request.body);
             response.status(201).json({
                 data: novoFuncionario,
                 error: false,
                 msg:"Exito ao cadastrar"
             });
-        } catch (error) {
+        }
+        catch (error) {
             response.status(400).json({
                 data: error,
                 error: true,
@@ -20,5 +21,7 @@ class funcController{
         }
     }
 }
+
+
 
 export {funcController};

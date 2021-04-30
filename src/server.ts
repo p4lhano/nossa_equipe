@@ -7,6 +7,7 @@ console.clear();
 const app = express();
 const database = mongoose;
 
+app.use(express.json());
 app.use(router);
 
 app.listen(3000, () => {
