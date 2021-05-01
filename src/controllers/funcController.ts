@@ -16,7 +16,7 @@ class funcController{
             response.status(400).json({
                 data: error,
                 error: true,
-                msg: "Não foi possível adicionar o ciclo"
+                msg: "Não foi possível completar"
             });
         }
     }

@@ -1,6 +1,6 @@
 import express from "express";
-import {mongoose} from "../config/database";
-import {router} from "../config/routes";
+import {mongoose} from "./config/database";
+import {router} from "./config/routes";
 
 console.clear();
 
