@@ -33,7 +33,6 @@ const FuncSchema = new Schema(
         dataNascimento:{
             type: Date
         }
-
     },
     {
         timestamps: true
@@ -42,7 +41,6 @@ const FuncSchema = new Schema(
 
 export default model("funcionarios", FuncSchema);
 
-//Falta add os cargos, salarios, setor, vericar se será necessário criar mais schemas, acho que sim
 /*
 {
         "status": "ativo",
