@@ -78,6 +78,24 @@ class funcController{
             });
         }
     }
+
+    async remover(request: Request, response: Response){
+        try {
+            //console.log(request.body);
+            const removeIs = request.body.id;
+            //console.log({_id: removeIs});
+            //console.log(removeIs);
+            const RESPONSE_DB = await funcSchema.deleteOne({_id: removeIs});
+            //console.log(RESPONSE_DB);
+            response.json(RESPONSE_DB.deletedCount);//Retorna o JSON somente dos registro deletados
+        } catch (error) {
+            response.status(400).json({
+                data: error,
+                error: true,
+                msg: "Não foi possível completar a ação"
+            });
+        }
+    }
 }
 
 
