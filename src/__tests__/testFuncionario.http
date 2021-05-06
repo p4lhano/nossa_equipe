@@ -1,4 +1,4 @@
-###
+###Cadastrar
 POST http://localhost:3000/cadastrar/funcionario
 Content-Type: application/json
 
@@ -12,3 +12,35 @@ Content-Type: application/json
     "cnh": "51651",
     "dataNascimento": "2002-04-03"
 }
+
+###Remover pelo Id
+POST http://localhost:3000/funcionario/remover
+Content-Type: application/json
+
+{
+	"id": "6088b3952f53323090240c7d"
+}
+
+###Buscar pelo Id
+POST http://localhost:3000/buscar/funcionario
+Content-Type: application/json
+
+{
+	"id": "608dd9845e1aef3468f47db9"
+}
+
+###Buscar nome
+POST http://localhost:3000/buscar/funcionario/Ana
+
+###Update
+POST http://localhost:3000/funcionario/alterar
+Content-Type: application/json
+
+{
+	"id": "608dd9845e1aef3468f47db9",
+	"alterar": {
+		"cargo": "ANALISTA",
+        "salario": 600
+	}
+}
+
