@@ -40,6 +40,7 @@ const FuncSchema = new Schema(
 );
 
 export default model("funcionarios", FuncSchema);
+export {FuncSchema};
 
 /*
 {

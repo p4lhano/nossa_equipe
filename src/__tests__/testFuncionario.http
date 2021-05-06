@@ -1,0 +1,14 @@
+###
+POST http://localhost:3000/cadastrar/funcionario
+Content-Type: application/json
+
+{
+    "status": "ativo",
+    "nome": "Vitor",
+    "cpf": "999999.9",
+    "cargo": "ASSISTENTE",
+    "salario": 256,
+    "setor": "Banco",
+    "cnh": "51651",
+    "dataNascimento": "2002-04-03"
+}

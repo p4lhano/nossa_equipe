@@ -1,4 +1,5 @@
 import { model, Schema } from "mongoose";
+import { FuncSchema } from "./funcSchema";
 
 const AtividadeSchema = new Schema(
   {
@@ -15,9 +16,9 @@ const AtividadeSchema = new Schema(
       type: String,
       required: [true, "O campo criador é obrigatorio"]
     },
-    funcionario: {
-        type: String,
-    },
+    
+    funcionario: [FuncSchema],
+
     inciadaEm: {
         type: Date
     },
