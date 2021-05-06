@@ -30,7 +30,7 @@ Content-Type: application/json
 }
 
 ###Buscar nome
-POST http://localhost:3000/buscar/funcionario/Ana
+GET http://localhost:3000/buscar/funcionario/Ana
 
 ###Update
 POST http://localhost:3000/funcionario/alterar
