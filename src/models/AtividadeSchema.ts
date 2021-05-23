@@ -1,5 +1,5 @@
 import { model, Schema } from "mongoose";
-import { FuncSchema } from "./funcSchema";
+import funcSchema, { FuncSchema } from "./funcSchema";
 
 const AtividadeSchema = new Schema(
   {
@@ -17,7 +17,10 @@ const AtividadeSchema = new Schema(
       required: [true, "O campo criador é obrigatorio"]
     },
     
-    funcionario: [FuncSchema],
+    funcionario: [{
+      type: Schema.Types.ObjectId,
+      ref: funcSchema
+    }],
 
     inciadaEm: {
         type: Date

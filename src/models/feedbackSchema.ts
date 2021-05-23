@@ -1,10 +1,11 @@
 import { model, Schema } from "mongoose";
+import funcSchema from "./funcSchema";
 
 const feedbackSchema = new Schema(
     {
-        funcionario_id: {
-            type: String,
-            require: true
+        funcionario: {
+            type: Schema.Types.ObjectId,
+            ref: funcSchema
         }, msg: {
             type: String,
             require: true
