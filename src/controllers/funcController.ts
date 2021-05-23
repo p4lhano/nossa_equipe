@@ -23,9 +23,9 @@ class funcController{
 
     async buscaId(request: Request, response: Response) {
         try {
-            const {id} = request.body;
+            const {id} = request.params;
             //console.log({ _id: id});
-            const buscaFeita = await funcSchema.find({ _id: id});
+            const buscaFeita = await funcSchema.findOne({ _id: id});
             //console.log(buscaFeita);
             response.json(buscaFeita);
         } catch (error) {
@@ -56,11 +56,11 @@ class funcController{
 
     async alterar(request: Request, response: Response){
         try {
-            console.log(request.body);
+            //console.log(request.body);
             const id = request.body.id;
             const alterar = request.body.alterar;
-            console.log({id: id});
-            console.log(alterar);
+            //console.log({id: id});
+            //console.log(alterar);
             //const {id} = request.body;
             //console.log({ _nome: nome});
             
@@ -81,8 +81,8 @@ class funcController{
 
     async remover(request: Request, response: Response){
         try {
-            //console.log(request.body);
-            const removeIs = request.body.id;
+            console.log(request.params);
+            const removeIs = request.params;
             //console.log({_id: removeIs});
             //console.log(removeIs);
             const RESPONSE_DB = await funcSchema.deleteOne({_id: removeIs});

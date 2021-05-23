@@ -14,26 +14,18 @@ Content-Type: application/json
 }
 
 ###Remover pelo Id
-POST http://localhost:3000/funcionario/remover
-Content-Type: application/json
+DELETE http://localhost:3000/funcionario/remover/6088b3952f53323090240c7d
 
-{
-	"id": "6088b3952f53323090240c7d"
-}
 
 ###Buscar pelo Id
-POST http://localhost:3000/buscar/funcionario
-Content-Type: application/json
+GET http://localhost:3000/buscar/funcionario/id/608dd9845e1aef3468f47db9
 
-{
-	"id": "608dd9845e1aef3468f47db9"
-}
 
 ###Buscar nome
 GET http://localhost:3000/buscar/funcionario/Ana
 
 ###Update
-POST http://localhost:3000/funcionario/alterar
+PUT http://localhost:3000/funcionario/alterar
 Content-Type: application/json
 
 {

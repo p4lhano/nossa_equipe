@@ -9,10 +9,10 @@ const feedback = new feedbackController();
 const atividade = new AtividadeController();
 
 router.post("/cadastrar/funcionario",funcionario.cadastrar);
-router.post("/buscar/funcionario", funcionario.buscaId);
+router.get("/buscar/funcionario/id/:id", funcionario.buscaId);
 router.get("/buscar/funcionario/:nome", funcionario.buscaNome);
-router.post("/funcionario/alterar",funcionario.alterar);
-router.post("/funcionario/remover",funcionario.remover);
+router.put("/funcionario/alterar",funcionario.alterar);
+router.delete("/funcionario/remover/:id",funcionario.remover);
 router.get("/feedback/add", feedback.cadastrar);
 
 router.post("/ativiade/cadastrar", atividade.cadastrar);
