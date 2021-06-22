@@ -4,17 +4,17 @@ Content-Type: application/json
 
 {
     "status": "ativo",
-    "nome": "Vitor",
-    "cpf": "999999.9",
+    "nome": "Cesar",
+    "cpf": "1235",
     "cargo": "ASSISTENTE",
-    "salario": 256,
-    "setor": "Banco",
+    "salario": 3000,
+    "setor": "Caixa",
     "cnh": "51651",
-    "dataNascimento": "2002-04-03"
+    "dataNascimento": "2000-05-28"
 }
 
 ###Remover pelo Id
-DELETE http://localhost:3000/funcionario/remover/6088b3952f53323090240c7d
+DELETE http://localhost:3000/funcionario/remover/60aad41a09e98415d03f9962
 
 
 ###Buscar pelo Id
@@ -29,10 +29,10 @@ PUT http://localhost:3000/funcionario/alterar
 Content-Type: application/json
 
 {
-	"id": "608dd9845e1aef3468f47db9",
+	"id": "60aad4e26ef7043098cc113d",
 	"alterar": {
-		"cargo": "ANALISTA",
-        "salario": 600
+		"cargo": "PRESIDENTE",
+        "salario": 60000
 	}
 }
 

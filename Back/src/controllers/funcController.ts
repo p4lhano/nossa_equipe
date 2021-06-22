@@ -82,7 +82,7 @@ class funcController{
     async remover(request: Request, response: Response){
         try {
             console.log(request.params);
-            const removeIs = request.params;
+            const removeIs = request.params.id;
             //console.log({_id: removeIs});
             //console.log(removeIs);
             const RESPONSE_DB = await funcSchema.deleteOne({_id: removeIs});
