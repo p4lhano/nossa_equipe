@@ -8,6 +8,7 @@ const funcionario = new funcController();
 const feedback = new feedbackController();
 const atividade = new AtividadeController();
 
+router.get("/funcionario/listar",funcionario.listar);
 router.post("/cadastrar/funcionario",funcionario.cadastrar);
 router.get("/buscar/funcionario/id/:id", funcionario.buscaId);
 router.get("/buscar/funcionario/:nome", funcionario.buscaNome);

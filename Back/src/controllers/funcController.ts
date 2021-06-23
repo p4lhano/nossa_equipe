@@ -2,6 +2,19 @@ import {Request, Response} from "express";
 import funcSchema from "../models/funcSchema";
 
 class funcController{
+    async listar(request: Request, response: Response){
+        try {
+            const funcionarios = await funcSchema.find();
+            response.status(200).json(funcionarios);
+          } catch (error) {
+            response.status(400).json({
+                    data: error,
+                    error: true,
+                    msg: "Não foi possível listar os funcionarios",
+                });
+            }
+    }
+
     async cadastrar(request: Request, response: Response) {
         try {
             //console.log(request.body);
