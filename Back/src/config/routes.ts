@@ -16,11 +16,12 @@ router.put("/funcionario/alterar",funcionario.alterar);
 router.delete("/funcionario/remover/:id",funcionario.remover);
 router.get("/feedback/add", feedback.cadastrar);
 
-router.post("/ativiade/cadastrar", atividade.cadastrar);
+router.post("/atividade/cadastrar", atividade.cadastrar);
 router.get("/atividade/procurarPorTitulo/:titulo", atividade.procurarAtividadePorTitulo);
 router.get("/atividade/procurarPorCriador/:criador", atividade.procurarAtividadePorCriador);
 router.put("/atividade/alterar", atividade.alterar);
 router.delete("/atividade/deletar/:titulo", atividade.deletar);
 router.put("/atividade/cadastrarFuncionario", atividade.cadastrarFuncionario);
+router.get("/atividade/listar", atividade.listar);
 
 export {router};

@@ -170,6 +170,19 @@ class AtividadeController{
             });
         }
     }
+
+    async listar(request: Request, response: Response){
+        try {
+            const atividades = await AtividadeSchema.find();
+            response.status(200).json(atividades);
+          } catch (error) {
+            response.status(400).json({
+                    data: error,
+                    error: true,
+                    msg: "Não foi possível listar as atividades",
+                });
+            }
+    }
 }
 
 export { AtividadeController };

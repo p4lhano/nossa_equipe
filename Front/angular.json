@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "bb94af70-1fe6-4aa8-b461-20b018b7fe5e"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Front": {
+    "FRONT": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -43,7 +40,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Front",
+            "outputPath": "dist/FRONT",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -53,6 +50,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -94,10 +92,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Front:build:production"
+              "browserTarget": "FRONT:build:production"
             },
             "development": {
-              "browserTarget": "Front:build:development"
+              "browserTarget": "FRONT:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,11 +103,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Front:build"
+            "browserTarget": "FRONT:build"
           }
         }
       }
     }
   },
-  "defaultProject": "Front"
+  "defaultProject": "FRONT"
 }

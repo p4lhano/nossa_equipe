@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Funcionario } from 'src/app/models/Funcionario';
+import { Atividade } from 'src/app/models/Atividade';
 import { AtividadeService } from 'src/app/services/atividade.service';
 
 @Component({
@@ -8,17 +8,17 @@ import { AtividadeService } from 'src/app/services/atividade.service';
   templateUrl: './listar.component.html',
   styleUrls: ['./listar.component.css']
 })
-export class ListarFuncionarioComponent implements OnInit {
-  funcionarios!: MatTableDataSource<Funcionario>;
-  funcionarioColumns: string[] = ['nome', 'cpf', 'dataNascimento', 'cargo', 'status'];
+export class ListarAtividadeComponent implements OnInit {
+  atividades!: MatTableDataSource<Atividade>;
+  atividadeColumns: string[] = ['titulo', 'iniciadaEm', 'dataFinal'];
 
 
 
   constructor(private service: AtividadeService) { }
 
   ngOnInit(): void {
-    this.service.funcionarioListar().subscribe((funcionarios) => {
-      this.funcionarios = new MatTableDataSource<Funcionario>(funcionarios);
+    this.service.atividadeListar().subscribe((atividades) => {
+      this.atividades = new MatTableDataSource<Atividade>(atividades);
     })
   }
 

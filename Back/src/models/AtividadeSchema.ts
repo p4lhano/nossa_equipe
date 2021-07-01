@@ -7,10 +7,8 @@ const AtividadeSchema = new Schema(
       type: String,
       required: [true, "O campo titulo é obrigatorio"]
     },
-    tempoProducao: {
-        type: Number,
-        min: [1, "Tempo minimo 1 dia"],
-        required: [true, "O campo tempo de produção é obrigatorio"]
+    dataFinal: {
+        type: Date
     },
     criador: {
       type: String,
@@ -22,7 +20,7 @@ const AtividadeSchema = new Schema(
       ref: funcSchema
     }],
 
-    inciadaEm: {
+    iniciadaEm: {
         type: Date
     },
     descricao:{
