@@ -5,10 +5,10 @@ import { ListarComponent } from './components/views/funcionario/listar/listar.co
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: ListarComponent
   },{
-    path:"funcionario/cadastradar",
+    path:'funcionario/cadastradar',
     component: CadastrarComponent
   }
 ];

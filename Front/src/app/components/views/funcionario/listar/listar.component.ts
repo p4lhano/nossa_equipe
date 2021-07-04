@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http"
-import { funcionario } from 'src/app/models/funcionario';
+import {HttpClient } from "@angular/common/http";
+import { Funcionario } from 'src/app/models/Funcionario';
 
 @Component({
   selector: 'app-listar',
@@ -8,16 +8,23 @@ import { funcionario } from 'src/app/models/funcionario';
   styleUrls: ['./listar.component.css']
 })
 export class ListarComponent implements OnInit {
-
+  contador: number = 0; 
+  funcionarios: Funcionario[] = [];
   constructor(http: HttpClient) {
-    http.get<funcionario[]>("http://localhost:3000/funcionario/listar").subscribe((funcionarios)=>{
+    http.get<Funcionario[]>("http://localhost:3000/funcionario/listar").subscribe((funcionarios)=>{
       console.log(funcionarios);
+      this.funcionarios = funcionarios;
     });
   }
 
+
+  //onInit vai dizer oq fazer quando criar o objeto
   ngOnInit(): void {
 
 
+  }
+  incrementar(): void {
+    this.contador++;
   }
 
 }

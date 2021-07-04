@@ -5,6 +5,14 @@ class funcController{
     async listar(request: Request, response: Response){
         try {
             const funcionarios = await funcSchema.find();
+            /*
+            response.status(200).json({
+                data: funcionarios,
+                error: false,
+                msg: "Ação concluida"
+                
+            });
+            */
             response.status(200).json(funcionarios);
           } catch (error) {
             response.status(400).json({

@@ -1,3 +1,11 @@
 <p>listar works!</p>
 
 <a routerLink="/funcionario/cadastradar">Novo funcionario</a>
+
+<button (click)="incrementar()">contar</button>
+
+<ul>
+    <li *ngFor="let funcionario of funcionarios">
+        {{ funcionario.nome }}
+    </li>
+</ul>
