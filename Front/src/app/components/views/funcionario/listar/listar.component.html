@@ -1,11 +1,22 @@
-<p>listar works!</p>
-
-<a routerLink="/funcionario/cadastradar">Novo funcionario</a>
-
+<!--
 <button (click)="incrementar()">contar</button>
+-->
 
-<ul>
-    <li *ngFor="let funcionario of funcionarios">
-        {{ funcionario.nome }}
-    </li>
-</ul>
+<table >
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Criado em</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let funcionario of funcionarios">
+            <td>{{ funcionario._id }}</td>
+            <td>{{ funcionario.nome }}</td>
+            <td>{{ funcionario.createdAt | date: "dd/MM/yyyy HH:mm"}}</td>
+        </tr>
+    </tbody>
+</table>
+
+

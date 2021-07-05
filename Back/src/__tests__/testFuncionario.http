@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
     "status": "ativo",
-    "nome": "Cesar",
+    "nome": "ana maria",
     "cpf": "1235",
     "cargo": "ASSISTENTE",
     "salario": 3000,

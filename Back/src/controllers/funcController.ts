@@ -27,11 +27,14 @@ class funcController{
         try {
             //console.log(request.body);
             const novoFuncionario = await funcSchema.create(request.body);
+            /*
             response.status(201).json({
                 data: novoFuncionario,
                 error: false,
                 msg:"Exito ao cadastrar"
             });
+            */
+            response.status(201).json(novoFuncionario);
         }
         catch (error) {
             response.status(400).json({

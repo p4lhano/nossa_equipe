@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient } from "@angular/common/http";
 import { Funcionario } from 'src/app/models/Funcionario';
+import { FuncionariosService } from 'src/app/services/funcionarios.service';
 
 @Component({
   selector: 'app-listar',
@@ -10,17 +10,15 @@ import { Funcionario } from 'src/app/models/Funcionario';
 export class ListarComponent implements OnInit {
   contador: number = 0; 
   funcionarios: Funcionario[] = [];
-  constructor(http: HttpClient) {
-    http.get<Funcionario[]>("http://localhost:3000/funcionario/listar").subscribe((funcionarios)=>{
-      console.log(funcionarios);
-      this.funcionarios = funcionarios;
-    });
-  }
+  constructor(private service: FuncionariosService) { }
 
 
   //onInit vai dizer oq fazer quando criar o objeto
   ngOnInit(): void {
-
+    this.service.listar().subscribe((funcionarios)=>{
+      console.log(funcionarios);
+      this.funcionarios = funcionarios;
+    });
 
   }
   incrementar(): void {

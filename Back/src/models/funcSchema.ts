@@ -10,11 +10,11 @@ const FuncSchema = new Schema(
         },
         nome: {
             type: String,
-            require: [true, "O campo nome é obrigatório!"]
+            require: [false, "O campo nome é obrigatório!"]
         },
         cpf: {
             type: String,
-            require: [true, "O campo CPF é obrigatório!"]
+            require: [false, "O campo CPF é obrigatório!"]
         },
         cargo: {
             type: String,

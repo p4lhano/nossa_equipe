@@ -1,3 +1,6 @@
-<p>cadastrar works!</p>
+<label for="nome">Nome </label>
+<input type="text" name="nome" id="nome" [(ngModel)]="funcionario.nome">
+<!--NgModel = import em referencias externas no compomente raiz do angular o "FormComponent"-->
 
-<a routerLink="/">Listar funcionario</a>
+<br>
+<button (click)="cadastrar()">Cadastrar</button>
