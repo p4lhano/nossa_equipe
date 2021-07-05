@@ -22,12 +22,11 @@ const FuncSchema = new Schema(
             uppercase: true
         },
         salario: {
-            type: Number
+            type: Number,
+            min: [500, "Salario minimo 500 reais"],
+            require: [true, "O campo salario é obrigatório!"]
         },
         setor: {
-            type: String
-        },
-        cnh: {
             type: String
         },
         dataNascimento:{

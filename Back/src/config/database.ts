@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 mongoose.connect(
-    "mongodb+srv://AdmUserNossaEquipe:hiper4dmin@nossaequipedb.7pbjk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "mongodb+srv://cesaradm:adm123@clustertopicosavancados.phciw.mongodb.net/QuintaNoite?retryWrites=true&w=majority",
     {useNewUrlParser: true, useUnifiedTopology: true}
 ).then(() => {
     console.log("Aplicação conectada ao DataBase_MongoDB");

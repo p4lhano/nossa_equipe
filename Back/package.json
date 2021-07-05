@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+<<<<<<< HEAD
     "@types/cors": "^2.8.10",
+=======
+>>>>>>> 028c442d78ecbb7b7019a7843cc2fdbbb44e2195
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.12.7",
     "typescript": "^4.2.4"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.10",
     "@types/express": "^4.17.11"
   },
   "scripts": {
